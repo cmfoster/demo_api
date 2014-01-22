@@ -22,7 +22,7 @@ require './lib/import_methods'
     validates_with_method :ensure_non_conflicting_date_time
     
     def ensure_non_conflicting_date_time
-        if Appointment.all(:start_time => (self.start_time..self.end_time), :end_time => (self.start_time..self.end_time)).empty?
+        if Appointment.all(:start_time.gt => start_t, :end_time.lt => end_t).empty?
           [true]
         else
           [false, "Conflicting appointment times for #{self.start_time.strftime('%m/%d/%y')}"]
@@ -60,7 +60,7 @@ require './lib/import_methods'
         start_t, end_t = DateTime.parse(params[:start_time]), DateTime.parse(params[:end_time])
         
         status 200
-        Appointment.all(:start_time => (start_t..end_t), :end_time => (start_t..end_t)).to_json
+        Appointment.all(:start_time.gt => start_t, :end_time.lt => end_t).to_json
       end
     end
     
