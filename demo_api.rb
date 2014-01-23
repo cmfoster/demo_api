@@ -117,7 +117,7 @@ require './lib/import_methods'
         if @appointment
           { :error => @appointment.errors.full_messages }.to_json
         else
-          { :error => "Appointment not found."}
+          { :error => "Appointment not found."}.to_json
         end
       end
 

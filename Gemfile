@@ -5,6 +5,8 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'sinatra-contrib'
 gem 'json'
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 group :development do
   gem 'thin'

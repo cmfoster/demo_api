@@ -2,9 +2,15 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require
 
-root_dir = File.direname(__FILE__)
+root_dir = File.dirname(__FILE__)
 app_file = File.join(root_dir, 'demo_api.rb')
 
 require app_file
 
-run DemoApi
+set :environment, ENV['RACK_ENV'].to_sym
+set :root,      root_dir
+set :app_file,  app_file
+disable :run
+
+run Sinatra::Application
+
