@@ -26,7 +26,6 @@ Hopefully I've included all of the right gems.
 ***
 
 ### API Methods
-===============
 
 **Output/input formats supported:**
 JSON
