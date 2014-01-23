@@ -123,8 +123,7 @@ require './lib/import_methods'
 
     #   CATCH ALL INVALID REQUESTS
     get '/*' do
-      url = "#{request.scheme}://#{request.host}/"
-      { :error => "Invalid API request. Please review the documentation at #{url}" }.to_json
+      { :error => "Invalid API request. Please review the documentation at http://github.com/cmfoster/demo_api" }.to_json
     end
 
   end
