@@ -1,5 +1,4 @@
 class ImportCSV
-  require 'csv'
 
   class << self
     def import
