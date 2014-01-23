@@ -7,7 +7,7 @@ require './lib/import_methods'
 
 #Setup Database connection
   DataMapper::Logger.new($stdout, :debug)
-  DataMapper.setup(:default, ENV['db_credentials'] || 'postgres://demo_api:dev@localhost/demo_api_db')
+  DataMapper.setup(:default, ENV['DB_CREDENTIALS'] || 'postgres://demo_api:dev@localhost/demo_api_db')
 
 #Setup Objects
   class Appointment
