@@ -38,7 +38,7 @@ Entering a start_time or end_time is not required and will return all appointmen
 *Status: 200*
 
 **Create**
-`/appointments/create POST`
+`/appointments POST`
 Example request data:
 ```
   {
