@@ -1,4 +1,4 @@
-# Demo API for Care Cloud
+# Demo API
 =========================
 
 Ruby 2.0.0p353
